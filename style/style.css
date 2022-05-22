@@ -1,0 +1,146 @@
+:root {
+    --rosaFuerte : #F54C7F;
+    --rosaRosa : #FFA1D4;
+    --rosaPiel : #FFC5BD;
+    --rosa1 : #F59D98 ;
+    --rosa2 : #FF8088;
+    --roboto: 'Roboto', sans-serif;
+    --kanit: 'Kanit', sans-serif;
+    --lato: 'Lato', sans-serif;
+    --white: #fff;
+    --black: #2e2e2e;
+    --gray: #787878;
+    --highlight: #ea8478;
+    --footer: #f7f7f7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background:var(--rosaFuerte);
+    font-family: system-ui;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+  
+.titulo-felicidades {
+    text-align: right;
+    font-size: 5rem;
+    font-weight: 800;
+    letter-spacing: -.06em;
+    margin: 0 0 16px;
+    
+}
+
+.div-linea-separadora {
+    height: 50px;
+    width: 5px;
+    background-color: yellow;
+    margin: 0 3rem ;
+}
+
+.titulo-habemus {
+    text-align: left;
+    font-size: 5rem;
+    font-weight: 800;
+    letter-spacing: -.06em;
+    margin: 0 0 16px;
+}
+  
+.span-titulos {
+    color: #fff;
+    display: block;
+    
+    line-height: 1.1;
+    position: relative;
+}
+  
+.span-titulos::before {
+    animation-name: var(--animation, a);
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    background: linear-gradient(90deg, var(--start-color), var(--end-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #fff;
+
+    position: absolute;
+    inset: 0;
+    content: var(--content);
+    opacity: 1;
+}
+  
+@keyframes a {
+  
+    0%,
+    16.667%,
+    100% {
+      opacity: 1;
+    }
+  
+    33.333%,
+    83.333% {
+      opacity: 0;
+    }
+}
+  
+@keyframes a2 {
+  
+    0%,
+    100% {
+      opacity: 0;
+    }
+  
+    33.333%,
+    50% {
+      opacity: 1;
+    }
+  
+    16.667%,
+    66.667% {
+      opacity: 0;
+    }
+}
+  
+@keyframes a3 {
+    0%,
+    50%,
+    100% {
+      opacity: 0;
+    }
+  
+    66.667%,
+    83.333% {
+      opacity: 1;
+    }
+}
+
+.section-principal {
+    height: 70vh;
+    background-color: var(--rosaPiel);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo-section {
+    color: var(--rosaFuerte);
+    margin: 2rem 0;
+    font-size: 3rem;
+    font-family:var(--roboto);
+}
+
+.parrafos-section {
+    color: black;
+    width: 70%;
+    font-family: var(--lato);
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    line-height: 2rem;
+}
+
