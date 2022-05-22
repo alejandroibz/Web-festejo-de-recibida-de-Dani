@@ -1,0 +1,60 @@
+:root {
+    --rosaFuerte : #F54C7F;
+    --rosaRosa : #FFA1D4;
+    --rosaPiel : #FFC5BD;
+    --rosa1 : #F59D98 ;
+    --rosa2 : #FF8088;
+    --roboto: 'Roboto', sans-serif;
+    --kanit: 'Kanit', sans-serif;
+    --lato: 'Lato', sans-serif;
+    --white: #fff;
+    --black: #2e2e2e;
+    --gray: #787878;
+    --highlight: #ea8478;
+    --footer: #f7f7f7;
+}
+body {
+    background-color: var(--rosaPiel);
+}
+
+h1 {
+    text-align: center;
+}
+blockquote {
+    margin: 6rem auto;
+    padding: 1em;
+    border-left: 5px solid #F54C7F;
+  }
+
+
+  blockquote p {
+    color:var(--rosaFuerte);
+    font-size: 12pt;
+    line-height: 1.4;
+    font-family: 'PT Serif', Cambria, 'Hoefler Text', Utopia, 'Liberation Serif', 'Nimbus Roman No9 L Regular', Times, 'Times New Roman', serif;
+  }
+  blockquote footer {
+    margin-top: .5em;
+    padding: 0;
+    color:var(--white);
+    font-size: 12pt;
+    text-align: left;
+    font-style: italic;
+  }
+  blockquote footer:before {
+    content: '— ';
+  }
+  blockquote:nth-of-type(even) {
+    text-align: right;
+    border-left: none;
+    border-right: 5px solid #F54C7F;
+  }
+  blockquote:nth-of-type(even) footer {
+    text-align: right;
+  }
+  blockquote:nth-of-type(even) footer:before {
+    content: '';
+  }
+  blockquote:nth-of-type(even) footer:after {
+    content: ' —';
+  }
