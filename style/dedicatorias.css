@@ -25,6 +25,15 @@
     color: var(--rosaFuerte);
   }
 
+  .parrafo-link {
+    text-align: center;
+  }
+
+  .parrafo-link a {
+    color: var(--white);
+    text-decoration: none;
+  }
+
   @media (max-width: 705px) {
     body {
       font-size: 0.8em;
@@ -199,5 +208,7 @@
   .cardBody .cardStats .cardStats_stat.cardStats_stat-comments {
     color: #ff9579;
   }
+  
+
   
   
