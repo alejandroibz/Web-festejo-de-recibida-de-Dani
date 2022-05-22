@@ -13,48 +13,191 @@
     --highlight: #ea8478;
     --footer: #f7f7f7;
 }
-body {
-    background-color: var(--rosaPiel);
-}
 
-h1 {
+  body {
+    background-color:var(--rosaPiel);
+    font-family: Nunito, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1 {
     text-align: center;
-}
-blockquote {
-    margin: 6rem auto;
+    color: var(--rosaFuerte);
+  }
+
+  @media (max-width: 705px) {
+    body {
+      font-size: 0.8em;
+    }
+  }
+  
+  .deck {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    margin: 5em auto 3em;
+  }
+  @media (max-width: 705px) {
+    .deck {
+      margin: 4em auto;
+    }
+  }
+  .deck:before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 95%;
+    top: -1.5em;
+    left: 0em;
+    border-radius: 8px;
+    background: linear-gradient(109.61deg, #6174ff 4.26%, #f80000 84.84%);
+  }
+  @media (max-width: 550px) {
+    .deck:before {
+      left: 1.5em;
+    }
+  }
+  
+  .card {
+    position: relative;
+    background-color:var(--rosaFuerte);
     padding: 1em;
-    border-left: 5px solid #F54C7F;
+    z-index: 5;
+    border-radius: 2px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+    transition: 200ms ease-in-out;
   }
 
-
-  blockquote p {
-    color:var(--rosaFuerte);
-    font-size: 12pt;
-    line-height: 1.4;
-    font-family: 'PT Serif', Cambria, 'Hoefler Text', Utopia, 'Liberation Serif', 'Nimbus Roman No9 L Regular', Times, 'Times New Roman', serif;
+  .fa-envelope {
+    color: var(--rosaPiel);
   }
-  blockquote footer {
-    margin-top: .5em;
-    padding: 0;
-    color:var(--white);
-    font-size: 12pt;
-    text-align: left;
-    font-style: italic;
+  .card + .card {
+    margin-top: 1em;
   }
-  blockquote footer:before {
-    content: '— ';
+  .card:hover {
+    z-index: 7;
+    transform: scale(1.05);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
   }
-  blockquote:nth-of-type(even) {
+  .card-muy-izq {
+    margin-left: -3em;
+    margin-right: 3em;
+  }
+  @media (max-width: 705px) {
+    .card-muy-izq {
+      margin-left: -1em;
+      margin-right: 1em;
+    }
+  }
+  @media (max-width: 550px) {
+    .card-muy-izq {
+      margin: 0;
+    }
+  }
+  .card-derecha {
+    margin-left: 8em;
+    margin-right: -8em;
+    margin-top: -6em;
+  }
+  @media (max-width: 705px) {
+    .card-derecha {
+      margin-left: 1em;
+      margin-right: -1em;
+      margin-top: 1em;
+    }
+  }
+  @media (max-width: 550px) {
+    .card-derecha {
+      margin: 1em 0 0;
+    }
+  }
+  .card-poco-izq {
+    margin-top: -2em;
+    margin-left: -1em;
+    margin-right: 1em;
+  }
+  @media (max-width: 705px) {
+    .card-poco-izq {
+      margin-left: -1em;
+      margin-right: 1em;
+      margin-top: 1em;
+    }
+    .card-poco-izq:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1em;
+      display: block;
+      border-bottom: 5px solid rgba(192, 57, 43, 0.6);
+    }
+  }
+  @media (max-width: 550px) {
+    .card-poco-izq {
+      margin: 1em 0 0;
+    }
+  }
+  
+  .cardHeader {
+    display: grid;
+    grid-template-columns: 36px auto 100px;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  .cardHeader .cardHeader_type {
+    color: #FFD433;
+    margin: 10px;
+  }
+  .cardHeader .cardHeader_account {
+    color: #C6E1ED;
+    font-size: 0.85em;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .cardHeader .cardHeader_date {
+    margin: 10px;
+    color: #C6E1ED;
+    font-size: 0.85em;
+    font-weight: 600;
     text-align: right;
-    border-left: none;
-    border-right: 5px solid #F54C7F;
   }
-  blockquote:nth-of-type(even) footer {
+  
+  .cardBody {
+    display: flex;
+    margin: 0 10px 10px;
+  }
+  .cardBody .cardText {
+    margin: 0 10px 0 0;
+    white-space: pre-line;
+    color: #c0c3d7;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  .cardBody .cardText .cardText_highlight {
+    color: #ffe480;
+  }
+  .cardBody .cardStats {
+    font-size: 0.9em;
     text-align: right;
   }
-  blockquote:nth-of-type(even) footer:before {
-    content: '';
+  .cardBody .cardStats .cardStats_stat {
+    display: inline-block;
+    white-space: nowrap;
   }
-  blockquote:nth-of-type(even) footer:after {
-    content: ' —';
+  .cardBody .cardStats .cardStats_stat + .cardStats_stat {
+    margin-top: 5px;
   }
+  .cardBody .cardStats .cardStats_stat.cardStats_stat-likes {
+    color: #FFD3D4;
+  }
+  .cardBody .cardStats .cardStats_stat.cardStats_stat-retweets {
+    color: #B2D9A6;
+  }
+  .cardBody .cardStats .cardStats_stat.cardStats_stat-shares {
+    color: #d284a3;
+  }
+  .cardBody .cardStats .cardStats_stat.cardStats_stat-comments {
+    color: #ff9579;
+  }
+  
+  
