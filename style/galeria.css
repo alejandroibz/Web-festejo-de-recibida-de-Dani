@@ -129,3 +129,69 @@ h1 {
 .gallery__item5:nth-child(7) {
   grid-column-start: span 3;
 }
+
+
+ /* Phone landscape + portrait (iphone x) */
+ @media (min-width: 321px) and (max-width: 480px) {
+  .contenedor-galeria {
+    display: grid;
+    /* Con esto dije cuantas columnas quiero y cuanto midan */
+    grid-template-columns: repeat(1, 1fr);
+    /* Con esto di la altura de las filas */
+    grid-auto-rows: 350px;
+    /* Grid gap da un espaciado entre las distintas casillas del grid */
+    grid-gap: 10px;
+    padding: 20px;
+    margin: 0 ;
+  }
+  .gallery__item {
+    grid-column-start: span 3;
+  }
+  .gallery__item2 {
+    grid-column-start: span 3;
+  }
+  .gallery__item3 {
+    grid-column-start: span 3;
+  }
+  .gallery__item4 {
+    grid-column-start: span 3;
+  }
+  
+  .gallery__item5 {
+    grid-column-start: span 3;
+  }
+  
+
+}
+
+/* Small tablet portrait con aprox 800 de Height */
+@media (min-width: 481px) and (max-width: 600px) {
+  .contenedor-galeria {
+    display: grid;
+    /* Con esto dije cuantas columnas quiero y cuanto midan */
+    grid-template-columns: repeat(1, 1fr);
+    /* Con esto di la altura de las filas */
+    grid-auto-rows: 350px;
+    /* Grid gap da un espaciado entre las distintas casillas del grid */
+    grid-gap: 10px;
+    padding: 20px;
+    margin: 0 ;
+  }
+  .gallery__item {
+    grid-column-start: span 3;
+  }
+  .gallery__item2 {
+    grid-column-start: span 3;
+  }
+  .gallery__item3 {
+    grid-column-start: span 3;
+  }
+  .gallery__item4 {
+    grid-column-start: span 3;
+  }
+  
+  .gallery__item5 {
+    grid-column-start: span 3;
+  }
+  
+}
