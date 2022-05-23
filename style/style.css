@@ -243,4 +243,122 @@ header {
   .cards {
     justify-content: center;
   }
+
+
+
+}
+
+ /* Phone landscape + portrait (iphone x) */
+@media (min-width: 321px) and (max-width: 480px) {
+  header {
+    flex-direction: column;
+}
+
+.titulo-felicidades , .titulo-habemus{
+  text-align: center;
+}
+
+.section-principal {
+  height: auto;
+
+}
+
+.titulo-section {
+  color: var(--rosaFuerte);
+  margin:2rem 0;
+  font-size: 3rem;
+  font-family:var(--roboto);
+  text-align: center;
+}
+
+.parrafos-section {
+  color: black;
+  width: 80%;
+  font-family: var(--lato);
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  line-height: 2rem;
+}
+
+.nombre-dani {
+font-size: 1.6rem;
+color: var(--rosaFuerte);
+font-weight: 800;
+}
+
+
+.card {
+  width: 80%;
+}
+
+.article-con-links {
+  height: auto;
+}
+
+.titulo-section1 {
+  text-align: center;
+}
+
+}
+
+/* Small tablet portrait con aprox 800 de Height */
+@media (min-width: 481px) and (max-width: 600px) {
+  header {
+    flex-direction: column;
+}
+
+.titulo-felicidades , .titulo-habemus{
+  text-align: center;
+}
+
+.section-principal {
+  height: auto;
+
+}
+
+.titulo-section {
+  color: var(--rosaFuerte);
+  margin:2rem 0;
+  font-size: 3rem;
+  font-family:var(--roboto);
+  text-align: center;
+}
+
+.parrafos-section {
+  color: black;
+  width: 80%;
+  font-family: var(--lato);
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  line-height: 2rem;
+}
+
+.nombre-dani {
+font-size: 1.6rem;
+color: var(--rosaFuerte);
+font-weight: 800;
+}
+
+
+.card {
+  width: 80%;
+}
+
+.article-con-links {
+  height: auto;
+}
+
+.titulo-section1 {
+  text-align: center;
+}
+}
+
+ /* Large tablet portrait (ipad con 1024 de H) */
+@media (min-width: 601px) and (max-width: 768px) {
+
+}
+
+/* Tablet Landscape and XL tablet portrait (ipad pro con aprox 1366 de H) */
+@media (min-width: 769px) and (max-width: 1024px) {
+
 }
