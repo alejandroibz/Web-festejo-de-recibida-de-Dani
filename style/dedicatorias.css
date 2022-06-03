@@ -145,6 +145,14 @@
     .card-poco-izq {
       margin: 1em 0 0;
     }
+    
+    .card-derecha , .card-muy-izq , .card-poco-izq {
+      font-size: 1.3rem;
+    }
+
+    .cardHeader_account {
+      width: 100%;
+    }
   }
   
   .cardHeader {
