@@ -34,6 +34,7 @@
     text-decoration: none;
   }
 
+
   @media (max-width: 705px) {
     body {
       font-size: 0.8em;
@@ -74,7 +75,7 @@
     z-index: 5;
     border-radius: 2px;
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
-    transition: 200ms ease-in-out;
+    transition: none;
   }
 
   .fa-envelope {
@@ -85,7 +86,6 @@
   }
   .card:hover {
     z-index: 7;
-    transform: scale(1.05);
     box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
   }
   .card-muy-izq {
